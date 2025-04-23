@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no">
+	<title>首页 | beimen站</title>
+	<link rel="shortcut icon" href="图标" type="ico">
+	<style>
+		/* 新增普通文字样式 */
+		
+		        .load-time {
+		
+		            color: #333;
+		
+		            font-size: 16px;
+		
+		            margin: 20px 0;
+		
+		            padding: 5px;
+		
+		        }
+		
+				.href-color {
+		
+				
+		
+				  color: #48D1CC;
+		
+				
+		
+				}
+		
+				
+		
+				  a.href-color:link,
+		
+				
+		
+				  a.href-color:hover {
+		
+				
+		
+				    color: #48D1CC;
+		
+				
+		
+				  }
+		
+		      
+		
+		      .color2 {
+		
+				
+		
+				  color: #00d9ff;
+		
+				
+		
+				}
+		
+				
+		
+				  a.href-color:link,
+		
+				
+		
+				  a.href-color:hover {
+		
+				
+		
+				    color: #48D1CC;
+		
+				
+		
+				  }
+		
+				
+		
+				<!--上方为链接颜色调整-->
+		
+		.no-underline {
+		
+		  text-decoration: none;
+		
+		}
+		
+				<!--上方为链接下划线-->
+		
+				  html, body {
+		
+				
+		
+				    height: 100%;
+		
+				
+		
+				    margin: 0;
+		
+				
+		
+				    padding: 0;
+		
+				
+		
+				  }
+		
+				
+		
+				  .container {
+		
+				
+		
+				    display: flex;
+		
+				
+		
+				    flex-direction: column;
+		
+				
+		
+				    height: 100%;
+		
+				
+		
+				  }
+		
+				
+		
+				  .content {
+		
+				
+		
+				    flex-grow: 1;
+		
+				
+		
+				    padding: 20px;
+		
+				
+		
+				  }
+		
+				
+		
+				  .footer {
+		
+				
+		
+				    height: 280px;
+		
+				
+		
+				    background-color: #eaeaea;
+		
+				
+		
+				    padding: 20px;
+		
+				
+		
+				    text-align: center;
+		
+				
+		
+				    color: #333;
+		
+				
+		
+				  }
+		
+				
+		
+	</style>
+</head>
+<!--分============================================隔============================================符-->
+<style>
+	body {margin:0;}
+	
+	.navbar {
+	
+	  overflow: hidden;
+	
+	  background-color: #1a1a1a;
+	
+	  position: fixed;
+	
+	  top: 0;
+	
+	  width: 100%;
+	
+	}
+	
+	.navbar a {
+	
+	  float: left;
+	
+	  display: block;
+	
+	  color: #f2f2f2;
+	
+	  text-align: center;
+	
+	  padding: 15px 26px;
+	
+	  text-decoration: none;
+	
+	  font-size: 17px;
+	
+	}
+	
+	.navbar a:hover {
+	
+	  background: #ddd;
+	
+	  color: #1a1a1a;
+	
+	}
+	
+	.main {
+	
+	  padding: 15px;
+	
+	  margin-top: 30px;
+	
+	  height: 1500px;
+	
+	}
+	
+</style>
+<body>
+	<!--分============================================隔============================================符-->
+	<div class="navbar">
+		<a><img src="ico.ico" width="20" height="20" alt="图标">
+			<a class="w3-bar-item w3-button" href="https://beimen.cloudns.ch">首页</a>
+			<a class="w3-bar-item w3-button" href="https://pan.beimen.cloudns.ch">网盘</a>
+			<a class="w3-bar-item w3-button" href="https://beimen.cloudns.ch/game.html">游戏</a>
+			<a class="w3-bar-item w3-button" href="https://beimen.cloudns.ch/mc.html">MC</a>
+			<a class="w3-bar-item w3-button" href="https://beimencangyun.github.io/gengduo.html">更多</a>
+	</div>
+	<!--分============================================隔============================================符-->
+	<body>
+		<div class="container">
+			<div class="content">
+				<!-- 页面内容 -->
+				<p>‎‎‎‎</p>
+				<p>‎‎‎‎</p>
+				<h1>beimencangyun小站<h1>
+						<p>首页
+							<p />
+							<!-- 页面内容 -->
+			</div>
+			<div class="footer">
+				<!--分————隔————符-->
+				<p style="text-align: center;"><a href="https://space.bilibili.com/1587900578" target="_blank" rel="noopener" class="href-color" class="no-underline">BiliBili</a> <a href="https://github.com/beimencangyun" target="_blank" rel="noopener" class="href-color"
+						class="no-underline">Github</a>
+					<!-- 显示位置改为内容流中 -->
+				<div class="load-time" id="loadTime"></div>
+				<script>
+					window.onload = function() {
+					
+					    const timing = window.performance.timing;
+					
+					    const loadTime = timing.loadEventEnd - timing.navigationStart;
+					
+					    const displayElement = document.getElementById('loadTime');
+					
+					    // 添加格式化显示
+					
+					    if (loadTime > 0) {
+					
+					        displayElement.innerHTML = `
+					
+					            页面加载完成，耗时 <strong>${loadTime} 毫秒</strong><br>
+					
+					            （约 ${Math.round(loadTime/1000 * 10)/10} 秒）
+					
+					        `;
+					
+					    } else {
+					
+					        displayElement.innerHTML = "页面加载数据不可用";
+					
+					    }
+					
+					};
+					
+				</script>
+				<!--分————隔————符-->
+				<html>
+				<head>
+					<style>
+						.center-text {
+						
+						
+						
+						    text-align: center;
+						
+						
+						
+						}
+						
+						
+						
+					</style>
+				</head>
+				<body>
+					<div class="center-text">
+						<p>本站已安全运行了<b><strong>
+									<script language="JavaScript" type="text/javascript">
+										var urodz = new Date("4/23/2025");var now = new Date();var ile = now.getTime() - urodz.getTime();var dni = Math.floor(ile / (1000 * 60 * 60 * 24));document.write( + dni)
+										
+									</script>
+								</strong></b>天
+							<p />
+					</div>
+				</body>
+			</div>
+		</div>
+	</body>
+        </html>
